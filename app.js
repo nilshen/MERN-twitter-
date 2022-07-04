@@ -13,7 +13,7 @@ const tweets = require("./routes/api/tweets");
 const User = require('./models/User');
 const Tweet = require('./models/Tweet');
 
-// const passport = require('passport');
+const passport = require('passport');
 
 
 
@@ -35,8 +35,8 @@ app.get("/", (req, res) => {
     res.send("Hello Nil Shen!");
 });
 
-// app.use(passport.initialize());
-// require('./config/passport')(passport);
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 
 
